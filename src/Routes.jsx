@@ -14,6 +14,7 @@ import CreateAccount from "./pages/CreateAccount";
 import DeleteProduct from "./components/molecules/deleteProduct";
 import ResetPasswordPage from "./pages/PasswordResetPage";
 import AdminDashBoardLayout from './templates/AdminDashBoardLayout';
+import AdminUsers from './pages/AdminUsers'
 
 // Routes Component Containing Routes For All Base Pages.
 function Routes() {
@@ -24,19 +25,19 @@ function Routes() {
       <Route path="/login" element={<Login />} />
       <Route path="/create-account" element={<CreateAccount />} />
       <Route path="/email-verification" element={<EmailVerify />} />
-      <Route path="/phone-verification" element={<PhoneNumberVerification/>} />
+      <Route path="/phone-verification" element={<PhoneNumberVerification />} />
 
       {/* Protected Pages */}
       <Route path="/dashboard" element={<DashboardPage />} />
-      <Route element={<AdminDashBoardLayout/>}>
-        <Route path="/admin/dashboard" element ={<h1> create dashboard</h1>} />
+      <Route element={<AdminDashBoardLayout />}>
+        <Route path="/admin/dashboard" element={<h1> create dashboard</h1>} />
         <Route path="/admin/products" element={<h1> Admin producet </h1>} />
         <Route path="/admin/messages" element={<h2> messages </h2>} />
-        <Route path="/admin/users" element={<h2> users </h2>} />
+        <Route path="/admin/users" element={<AdminUsers />} />
         <Route path="/admin/profile" element={<h2> profile </h2>} />
       </Route>
       <Route path="/kyc" element={<Kyc />} />
-      <Route path="/products" element={<AddNewProductPage1/>} />
+      <Route path="/products" element={<AddNewProductPage1 />} />
       <Route path="/delete-product" element={<DeleteProduct />} />
       <Route path="/wishlist" element={<WishlistViewProducts />} />
       <Route path="/add-to-wishlist" element={<EmptyWishlistViewProducts />} />
